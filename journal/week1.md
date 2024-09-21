@@ -26,6 +26,12 @@ python3 -m flask run --host=0.0.0.0 --port=4567
 cd ..
 ```
 
+- we can later on remove the above envoronment variables with following commands 
+```sh 
+unset FRONTEND_URL
+unset BACKEND_URL
+```
+
 - make sure to unlock the port on the port tab
 - open the link for 4567 in your browser
 - append to the url to `/api/activities/home`
@@ -53,7 +59,7 @@ EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 ```
 
-### Build Container
+### Build Container Image
 
 ```sh
 docker build -t  backend-flask ./backend-flask
